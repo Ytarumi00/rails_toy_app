@@ -14,7 +14,7 @@
   <strong>
     Micropost:
   </strong>
-  <%= @user.microposts.first.content %>
+  <%= @user.microposts.exists? ? @user.microposts.first.content : 'No micropost' %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
